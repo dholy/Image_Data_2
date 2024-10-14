@@ -2,18 +2,27 @@
 
 ## Domain Proyek
 ![9 Ikon Kota Bandung, Gedung Sate Hingga Masjid Terapung » Bandung Aktual](https://i0.wp.com/bandungaktual.com/wp-content/uploads/2013/10/kota-bandung-gedung-sate-1.jpg?fit=661%2C364&ssl=1)
+
 sumber : bandungaktual.com
+
 
 Kondisi banyak kota di Indonesia yang umumnya berkembang pesat dan berfungsi sebagai pusat kegiatan serta menyediakan layanan primer dan sekunder, telah mengundang penduduk dari daerah pedesaan untuk mendapatkan kehidupan yang lebih baik serta berbagai kemudahan lain termasuk lapangan kerja. Kondisi tersebut di atas mengakibatkan terjadinya pertambahan penduduk yang lebih pesat dibanding kemampuan pemerintah di dalam menyediakan hunian serta layanan primer lainnya.[\[1\]](https://jurnal.umj.ac.id/index.php/nalars/article/view/551/517)
 
 **Kota Bandung** sebagai salah satu kota besar di Indonesia dengan daya tarik sebagai pusat pendidikan, bisnis, dan pariwisata, mengalami dinamika harga properti yang cukup signifikan. 
 prediksi harga rumah di kota ini menjadi hal yang menarik untuk dipelajari karena beberapa faktor berikut:
+
 **1. Permintaan yang Tinggi.**
+
 **2. Keterbatasan Lahan.**
+
 **3. Peningkatan Infrastruktur.**
+
 **4. Faktor Ekonomi.**
+
 **5. Faktor Psikologis.**
+
 **6. Investasi Jangka Panjang.**
+
 
 Bagi perusahan  maupun investor ini merupakan peluang sekaligus tantangan  dalam bisnis property rumah, dimana pemilihan property yang berkualitas bukan hanya dari harga yang murah namun harus memperhatikan faktor lain demi keuntungan yang lebih besar serta meminimalisir kerugian dimasa mendatang.
 
@@ -66,7 +75,7 @@ Algoritma k-Nearest Neighbor adalah algoritma supervised learning dimana hasil d
 sumber : cloudfront.net
 
 Secara umum, cara kerja algoritma KNN adalah sebagai berikut:
-				-  Tentukan jumlah tetangga (K) yang akan digunakan untuk pertimbangan penentuan kelas.
+				- 	Tentukan jumlah tetangga (K) yang akan digunakan untuk pertimbangan penentuan kelas.
 				-	Hitung jarak dari data baru ke masing-masing data point di dataset.
 				-	Ambil sejumlah K data dengan jarak terdekat, kemudian tentukan kelas dari data baru tersebut. [\[6\]](https://ilmudatapy.com/algoritma-k-nearest-neighbor-knn-untuk-klasifikasi/)
 				
