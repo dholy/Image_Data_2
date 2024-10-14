@@ -394,6 +394,7 @@ evaluasi model:
 
 Dari data tabel tersebut dapat divisualisasikan pada grafik batang berikut.
 ![image](https://github.com/user-attachments/assets/b1bcda8a-7715-44e6-922e-0ec1a127e717)
+
 Berdasarkan hasil evaluasi model, algoritma RF memiliki nilai MSE terendah pada data testing. Hal ini mengindikasikan bahwa model RF memiliki performa yang lebih baik dalam memprediksi harga rumah dibandingkan dengan KNN dan Boosting. Model RF mampu menangkap pola yang kompleks dalam data dengan lebih baik, yang menyebabkan model ini memiliki kemampuan generalisasi yang lebih tinggi.
 
 
