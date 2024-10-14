@@ -80,14 +80,22 @@ Secara umum, cara kerja algoritma KNN adalah sebagai berikut:
 				-	Ambil sejumlah K data dengan jarak terdekat, kemudian tentukan kelas dari data baru tersebut. [\[6\]](https://ilmudatapy.com/algoritma-k-nearest-neighbor-knn-untuk-klasifikasi/)
 				
 Jarak yang Sering Digunakan:
+
 a.	Jarak Euclidean: Rumus ini paling sering digunakan untuk menghitung jarak antara dua titik dalam ruang multidimensi.
-       $$d(x,y)=\sqrt{\sum_{i=1}^n (x_i-y_i)^2}$$
+
+$$d(x,y)=\sqrt{\sum_{i=1}^n (x_i-y_i)^2}$$
+       
 b.	Jarak Manhattan: Rumus ini menghitung jarak dengan menjumlahkan selisih absolut dari koordinat-koordinat yang sesuai.
-		$$d(x,y)=\sum_{i=1}^n |x_i-y_i|$$
+
+$$d(x,y)=\sum_{i=1}^n |x_i-y_i|$$
+  
 c. Jarak Minkowski: Ini adalah generalisasi dari jarak Euclidean dan Manhattan.
-		$$d(x,y)=\left(\sum_{i=1}^n |x_i-y_i|^p\right)^\frac{1}{p}$$
+
+$$d(x,y)=\left(\sum_{i=1}^n |x_i-y_i|^p\right)^\frac{1}{p}$$
+  
 d. Jarak Hamming digunakan untuk data biner (data yang hanya memiliki nilai 0 atau 1).
-		$$d(x,y)=\frac{1}{n}\sum_{n=1}^{n=n} |x_i-y_i|$$
+
+$$d(x,y)=\frac{1}{n}\sum_{n=1}^{n=n} |x_i-y_i|$$
 
 
 
