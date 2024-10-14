@@ -390,6 +390,7 @@ Rumus Mean Squared Error (MSE) diatas digunakan untuk mengukur rata-rata kuadrat
 **Intinya:** Rumus ini menghitung rata-rata dari kuadrat selisih antara nilai sebenarnya dan nilai prediksi. Kuadrat digunakan untuk memberikan bobot yang lebih besar pada kesalahan yang lebih besar.
 
 evaluasi model:
+
 ![image](https://github.com/user-attachments/assets/66735453-bb16-42a0-8dcd-d3589bee3e04)
 
 Dari data tabel tersebut dapat divisualisasikan pada grafik batang berikut.
