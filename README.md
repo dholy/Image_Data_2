@@ -71,7 +71,9 @@ Pada proyek ini kita juga akan memanfaatkan EDA untuk menangani rentang harga ya
 
 **-	Algoritma k-Nearest Neighbor** 
 Algoritma k-Nearest Neighbor adalah algoritma supervised learning dimana hasil dari instance yang baru diklasifikasikan berdasarkan mayoritas dari kategori k-tetangga terdekat. Tujuan dari algoritma ini adalah untuk mengklasifikasikan obyek baru berdasarkan atribut dan sample-sample dari training data. Algoritma k-Nearest Neighbor menggunakan Neighborhood Classification sebagai nilai prediksi dari nilai instance yang baru.[\[5\]](https://medium.com/bee-solution-partners/cara-kerja-algoritma-k-nearest-neighbor-k-nn-389297de543e)
+
 ![](https://d2jdgazzki9vjm.cloudfront.net/tutorial/machine-learning/images/k-nearest-neighbor-algorithm-for-machine-learning2.png)
+
 sumber : cloudfront.net
 
 Secara umum, cara kerja algoritma KNN adalah sebagai berikut:
