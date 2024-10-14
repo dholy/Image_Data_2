@@ -231,8 +231,11 @@ Dari data diatas dapat kita lihat terdapat missing value pada bedroom dan bathro
 
 Tahapan selanjutnya adalah melakukan deteksi outliers pada dataframe. Outliers adalah data yang nilainya jauh menyimpang dari distribusi data mayoritas. Untuk mendeteksi outliers ini, kita akan memvisualisasikan datanya menggunakan boxplot dengan bantuan library Seaborn.
 Untuk Menangani outlier kita akan menggunakan IQR (Inter Quartile Range) Method , berikut adalah bentuk persamaannya:
+
 Batas bawah = Q1 - 1.5 * IQR
+
 Batas atas = Q3 + 1.5 * IQR
+
 
 ![image](https://github.com/user-attachments/assets/e1ec5fb3-066f-4996-9364-7d79c8056d8a)
 
