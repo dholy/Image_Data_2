@@ -194,7 +194,7 @@ Dari gambar diatas bisa kita lihat terdapat duplikasi data sebanyak 1469 data. K
 
 Bisa kita lihat, tidak ada nilai yang hilang pada data.
 
-##### **Data Bersih**
+#### **Data Bersih**
 
 ![image](https://github.com/user-attachments/assets/bffdb837-0fb6-46ee-a3ed-f7202fd06b6f)
 
