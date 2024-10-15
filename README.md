@@ -129,14 +129,14 @@ Secara runtun, cara kerja algoritma ini dapat dijabarkan sebagai berikut:
 ## Data Understanding
 
 Pada proyek ini kita akan menggunakan 3 dataset dengan 1 dataset utama ,1 dataset untuk menambah jumlah data dan 1 dataset pendukung untuk melengkapi alamat kecamatan. Dataset yang digunakan adalah sebagai berikut:
- - Dataset Utama diambil dari Dataset Kaggele [Daftar Harga Rumah di Kota Bandung](https://www.kaggle.com/datasets/khaleeel347/harga-rumah-seluruh-kecamatan-di-kota-bandung). Didalam dataset tersebut terdapat file yang akan kita gunakan dengan nama *results_cleaned.csv*
- - Dataset yang digunakan untuk menambah jumlah data diambil dari Dataset Kaggele [Dataset Harga Rumah Bandung](https://www.kaggle.com/datasets/rafliaping/dataset-harga-rumah-bandung) (Data pendukung 1). file yang akan kita gunakan bernama *data_rumah.xlsx*
- - Dataset Pendukung [Datakelurahan](https://docs.google.com/spreadsheets/d/1Ub_VtM4_WMxCJeCSynKRtAhEonfzgRjI/export?format=xlsx&gid=371747489) , data ini diambil dari [stekom.ac.id](https://p2k.stekom.ac.id/ensiklopedia/Daftar_kecamatan_dan_kelurahan_di_Kota_Bandung) (Data pendukung 2). Tujuan dari data ini adalah untuk mengelompokkan alamat menjadi kecamatan.
 
-### **Deskripsi Variabel**  
+### **Dataset Utama**  
 
-![variabel1](https://github.com/user-attachments/assets/31c43ddf-1594-4758-9e6a-f2be67e4b315)
+Dataset Utama diambil dari Dataset Kaggele [Daftar Harga Rumah di Kota Bandung](https://www.kaggle.com/datasets/khaleeel347/harga-rumah-seluruh-kecamatan-di-kota-bandung). Didalam dataset tersebut terdapat file yang akan kita gunakan dengan nama *results_cleaned.csv*
+
 #### Variabel-variabel pada *results_cleaned.csv* adalah sebagai berikut:
+![variabel1](https://github.com/user-attachments/assets/31c43ddf-1594-4758-9e6a-f2be67e4b315)
+
 -   **house_name:**  Nama atau judul properti residensial.
 -   **location:**  Lokasi atau kecamatan di Bandung di mana properti tersebut berada.
 -   **bedroom_count:**  Jumlah kamar tidur di properti tersebut.
@@ -146,8 +146,15 @@ Pada proyek ini kita akan menggunakan 3 dataset dengan 1 dataset utama ,1 datase
 -   **land_area:**  Total luas tanah properti tersebut dalam meter persegi.
 -   **building_area:**  Total luas bangunan properti tersebut dalam meter persegi.
 
-![image](https://github.com/user-attachments/assets/123384c8-8e24-4d1b-b435-1fc911a20d77)
+Jumlah data yang terdapat pada data utama adalah 7609 baris dengan 8 kolom, berdasarkan informasi dari kaggle , data ini cukup bersih, namun kita tetap akan melakukan pengecekan ulang agar data sesuai dengan kebutuhan proyek.
+  
+### **Dataset Tambahan**  
+
+Dataset yang digunakan untuk menambah jumlah data diambil dari Dataset Kaggele [Dataset Harga Rumah Bandung](https://www.kaggle.com/datasets/rafliaping/dataset-harga-rumah-bandung) (Data pendukung 1). file yang akan kita gunakan bernama *data_rumah.xlsx*
+
 #### Variabel-variabel pada *data_rumah.xlsx* adalah sebagai berikut:
+![image](https://github.com/user-attachments/assets/123384c8-8e24-4d1b-b435-1fc911a20d77)
+
  - **Unnamed: 0 ,** Berisi nomor urut
  - **Judul :** berisi text promosi
  - **alamat :** lokasi rumah
@@ -157,6 +164,10 @@ Pada proyek ini kita akan menggunakan 3 dataset dengan 1 dataset utama ,1 datase
  - **lahan :** Total luas tanah properti tersebut dalam meter persegi.
  - **harga :** Harga properti tersebut dalam Rupiah Indonesia (IDR).
 
+Jumlah data yang terdapat pada dataset tambahan adalah 1470 baris dengan 8 kolom, kondisi data masih perlu dilakukan penyesuaian dengan data utama *results_cleaned* supaya nantinya kedua dataset dapat digabungkan.
+
+### **Dataset Pendukung**  
+Dataset Pendukung [Datakelurahan](https://docs.google.com/spreadsheets/d/1Ub_VtM4_WMxCJeCSynKRtAhEonfzgRjI/export?format=xlsx&gid=371747489) , data ini diambil dari [stekom.ac.id](https://p2k.stekom.ac.id/ensiklopedia/Daftar_kecamatan_dan_kelurahan_di_Kota_Bandung) (Data pendukung 2). Tujuan dari data ini adalah untuk mengelompokkan alamat menjadi kecamatan.
 
 #### Variabel-variabel pada *kelurahan.xlsx* adalah sebagai berikut:
  - **Kecamatan :** Nama kecamatan pada kota bandung
