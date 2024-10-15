@@ -308,7 +308,7 @@ Berdasarkan heatmap korelasi yang ditampilkan, kita dapat mengamati hubungan ant
     -   Jumlah kamar tidur dan kamar mandi masih memiliki kolerasi walau tidak terlalu kuat
 2.  Korelasi Lemah:
     -   Antara 'carport_count' dan 'price (million)': Korelasi positif yang lemah (0.31), menunjukkan bahwa pengaruh jumlah carport terhadap harga rumah relatif kecil.
-    - 
+
 Berdasarkan data ini kita bisa menghapus carport.
 
 ![image](https://github.com/user-attachments/assets/76f9636f-b81e-4f25-a057-f986f836004f)
