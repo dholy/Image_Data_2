@@ -187,6 +187,14 @@ data_rumah : 1470
 Total Data : 9079
 
 
+**Data Bersih**
+
+![image](https://github.com/user-attachments/assets/bffdb837-0fb6-46ee-a3ed-f7202fd06b6f)
+
+Setelah dilakukan penggabungan dan pembersihan data,maka kita mendapatkan data akhir dengan total data sebanyak 8243 baris dengan 8 kolom.
+
+
+
 
 **Nilai yang hilang dan nilai duplikat**
 
