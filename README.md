@@ -318,6 +318,8 @@ Berdasarkan data ini kita bisa menghapus carport.
 **Alasan mengapa diperlukan tahapan data preparation** adalah karena merupakan langkah krusial sebelum memulai pelatihan model machine learning. Tujuannya adalah untuk mengolah data mentah agar sesuai dan optimal untuk digunakan dalam proses pembelajaran mesin.
 #### **1. Dataset Preparation pada Dataset Utama**
 Pada tahapan ini hanya Mengganti nama kolom land_area menjadi land_area(m2) agar memudahkan pemaham terkait nilai didalamnya yang merupakan ukuran luas
+![image](https://github.com/user-attachments/assets/418f62da-374b-48df-8efe-1f9003de80bc)
+
 
 #### **2. Dataset Preparation pada Dataset tambahan**
 1.	Pertama, kita akan menyesuaikan data pada dataset *data_rumah* berdasarkan dataset  *results_cleaned*, dengan tahapan berikut:
