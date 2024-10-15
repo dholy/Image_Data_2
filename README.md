@@ -167,27 +167,6 @@ results_cleaned :  7609
 data_rumah : 1470
 Total Data : 9079
 
-
-
-### **Dataset Preparation**
-1.	Pertama, kita akan menyesuaikan data pada *data_rumah* berdasarkan dataset  *results_cleaned*, dengan tahapan berikut:
-	-   Menyeragamkan alamat menjadi kecamatan, dengan memanfaatkan dataset *kelurahan.xlsx*
-	-   Menghapus kolom yang tidak dibutuhkan untuk analisa dan pembuatan model.
-	-	Menyesuaikan nama kolom pada dataset *data_rumah*  berdasarkan nama kolom *results_cleaned* agar kedua dataset bisa digabungkan
-	-	Menambahkan minimal kamar mandi untuk  dataset *data_rumah* , penambahan ini dilakukan untuk menyusaikan nilai dengan dataset *results_cleaned*
-	
-![image](https://github.com/user-attachments/assets/a662f40f-7eef-4524-b4b9-7e5a04a44581)
-
-Berikut tampilan akhir data_rumah
-
-![image](https://github.com/user-attachments/assets/1fd1040e-3f92-4ca0-b728-a5e60e1ebb4a)
-
-2.	 Kedua, Menggabungkan kedua dataset menjadi dataframe *rumah_bersih*, dan menghapus duplikat data berdasarkan kolom house name.
-3.	 Ketiga, Mengubah ukuran price dari milyar ke juta untuk memudahkan pembacaan data.
-
-![image](https://github.com/user-attachments/assets/b5d7eb9d-d456-4844-81c6-72094b46c869)
-Total data setelah digabungkan adalah sebanyak 8243 data.
-
 ### **Exploratory Data Analysis.**
 Tahapan Selanjutnya setelah dataset sudah bersih adalah melakukan Exploratory Data Analysis.
 
@@ -301,15 +280,34 @@ Berdasarkan data ini kita bisa menghapus carport.
 
 ## Data Preparation
 **Alasan mengapa diperlukan tahapan data preparation**
-Sesuai dengan penjelasan pada bagian "Solution Statements", tahap persiapan data (data preparation) merupakan langkah krusial sebelum memulai pelatihan model machine learning. Tujuannya adalah untuk mengolah data mentah agar sesuai dan optimal untuk digunakan dalam proses pembelajaran mesin. Dalam proyek ini, kami telah melaksanakan dua tahap utama dalam persiapan data, yaitu :
+Sesuai dengan penjelasan pada bagian "Solution Statements", tahap persiapan data (data preparation) merupakan langkah krusial sebelum memulai pelatihan model machine learning. Tujuannya adalah untuk mengolah data mentah agar sesuai dan optimal untuk digunakan dalam proses pembelajaran mesin.
 
-**1.	Encoding Fitur Kategori**
+#### **1. Dataset Preparation**
+1.	Pertama, kita akan menyesuaikan data pada *data_rumah* berdasarkan dataset  *results_cleaned*, dengan tahapan berikut:
+	-   Menyeragamkan alamat menjadi kecamatan, dengan memanfaatkan dataset *kelurahan.xlsx*
+	-   Menghapus kolom yang tidak dibutuhkan untuk analisa dan pembuatan model.
+	-	Menyesuaikan nama kolom pada dataset *data_rumah*  berdasarkan nama kolom *results_cleaned* agar kedua dataset bisa digabungkan
+	-	Menambahkan minimal kamar mandi untuk  dataset *data_rumah* , penambahan ini dilakukan untuk menyusaikan nilai dengan dataset *results_cleaned*
+	
+![image](https://github.com/user-attachments/assets/a662f40f-7eef-4524-b4b9-7e5a04a44581)
+
+Berikut tampilan akhir data_rumah
+
+![image](https://github.com/user-attachments/assets/1fd1040e-3f92-4ca0-b728-a5e60e1ebb4a)
+
+2.	 Kedua, Menggabungkan kedua dataset menjadi dataframe *rumah_bersih*, dan menghapus duplikat data berdasarkan kolom house name.
+3.	 Ketiga, Mengubah ukuran price dari milyar ke juta untuk memudahkan pembacaan data.
+
+![image](https://github.com/user-attachments/assets/b5d7eb9d-d456-4844-81c6-72094b46c869)
+Total data setelah digabungkan adalah sebanyak 8243 data.
+
+#### **2. Encoding Fitur Kategori**
 Untuk mempersiapkan data kategorikal agar dapat diproses oleh algoritma machine learning, teknik one-hot encoding sering digunakan. Teknik ini mengubah setiap kategori menjadi sebuah fitur biner (0 atau 1), di mana nilai 1 menunjukkan keberadaan kategori tersebut. Scikit-learn menyediakan kelas OneHotEncoder yang memudahkan proses encoding ini.
 
 ![image](https://github.com/user-attachments/assets/30d35651-ca46-4ce0-aa51-6facb687b2e8)
 Dapat kita lihat untuk setiap kategori dalam fitur location telah diubah kedalam bentuk biner.
 
-**2.	Split Data**
+#### **3. Split Data**
 Membagi data menjadi 90% untuk training dan 10% untuk test. Pembagian Data Latih (Train) 90% dan Data Uji (Test) 10% adalah praktik umum dalam machine learning. Tujuan utama dari pembagian ini adalah untuk mengevaluasi kinerja model secara objektif sebelum digunakan pada data yang benar-benar baru.
 
 ![image](https://github.com/user-attachments/assets/297a0fe3-e52a-463d-a2db-86ba405ec6be)
