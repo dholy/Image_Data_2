@@ -235,7 +235,7 @@ Jika kita perhatikan minimal nilai pada propery adalah 0. Di zaman sekarang ini 
 
 ![image](https://github.com/user-attachments/assets/4f22c145-af19-4419-af39-d5dbeb2d9b27)
 
-Dari data diatas dapat kita lihat terdapat missing value pada bedroom dan bathroom serta anolami pada building area dan land_area dimana terdapat luas bangunan bernilai minus dan nol. Sedangkan Untuk carport_count tidak perlu dihiraukan karena beberapa rumah memang bisa tidak memiliki parkiran
+Dari data diatas dapat kita lihat terdapat missing value pada bedroom dan bathroom serta anomali pada building area dan land_area dimana terdapat luas bangunan bernilai minus dan nol. Sedangkan Untuk carport_count tidak perlu dihiraukan karena beberapa rumah memang bisa tidak memiliki parkiran
 
 **4.	Menangani Outliers**
 
