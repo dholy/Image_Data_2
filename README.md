@@ -130,7 +130,7 @@ Secara runtun, cara kerja algoritma ini dapat dijabarkan sebagai berikut:
 
 Pada proyek ini kita akan menggunakan 3 dataset dengan 1 dataset utama ,1 dataset untuk menambah jumlah data dan 1 dataset pendukung untuk melengkapi alamat kecamatan. Dataset yang digunakan adalah sebagai berikut:
 
-#### **Dataset Utama**  
+#### **1. Dataset Utama**  
 
 Dataset Utama diambil dari Dataset Kaggele [Daftar Harga Rumah di Kota Bandung](https://www.kaggle.com/datasets/khaleeel347/harga-rumah-seluruh-kecamatan-di-kota-bandung). Didalam dataset tersebut terdapat file yang akan kita gunakan dengan nama *results_cleaned.csv*
 
@@ -148,7 +148,7 @@ Dataset Utama diambil dari Dataset Kaggele [Daftar Harga Rumah di Kota Bandung](
 
 Jumlah data yang terdapat pada data utama adalah 7609 baris dengan 8 kolom, berdasarkan informasi dari kaggle , data ini cukup bersih, namun kita akan merubah nama kolom land_area menjadi land_area(m2) ,dan mengubah nilai price yang mencapai milyaran menjadi juta untuk memudahkan dalam pembacaan informasi didalam dataset.
   
-#### **Dataset Tambahan**  
+#### **2. Dataset Tambahan**  
 
 Dataset yang digunakan untuk menambah jumlah data diambil dari Dataset Kaggele [Dataset Harga Rumah Bandung](https://www.kaggle.com/datasets/rafliaping/dataset-harga-rumah-bandung) (Data pendukung 1). file yang akan kita gunakan bernama *data_rumah.xlsx*
 
@@ -166,7 +166,7 @@ Dataset yang digunakan untuk menambah jumlah data diambil dari Dataset Kaggele [
 
 Jumlah data yang terdapat pada dataset tambahan adalah 1470 baris dengan 8 kolom, kondisi data masih perlu dilakukan penyesuaian dengan data utama *results_cleaned* supaya nantinya kedua dataset dapat digabungkan.
 
-#### **Dataset Pendukung**  
+#### **3. Dataset Pendukung**  
 Dataset Pendukung [Datakelurahan](https://docs.google.com/spreadsheets/d/1Ub_VtM4_WMxCJeCSynKRtAhEonfzgRjI/export?format=xlsx&gid=371747489) , data ini diambil dari [stekom.ac.id](https://p2k.stekom.ac.id/ensiklopedia/Daftar_kecamatan_dan_kelurahan_di_Kota_Bandung) (Data pendukung 2). Tujuan dari data ini adalah untuk mengelompokkan alamat menjadi kecamatan.
 
 #####  Variabel-variabel pada *kelurahan.xlsx* adalah sebagai berikut:
@@ -178,7 +178,7 @@ Dataset Pendukung [Datakelurahan](https://docs.google.com/spreadsheets/d/1Ub_VtM
 Data set ini berisi alamat dan kecamatan dengan jumlah data 181 baris dan 2 kolom. Data ini nantinya akan digunakan untuk mengelompokkan alamat menjadi kecamatan pada *data_rumah.xlsx*
 
 
-#### **Nilai yang hilang dan nilai duplikat**
+#### **4. Nilai yang hilang dan nilai duplikat**
 
 - Nilai Duplikat
   
