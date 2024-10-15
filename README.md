@@ -51,12 +51,7 @@ Berdasarkan pernyataan masalah diatas maka dapat kita tentukan tujuan sebagai be
     ### Solution statements
 Dari pemaparan sebelumnya, maka terdapat beberapa solusi yang bisa kita gunakan untuk mencapai tujuan dari proyek ini, yaitu:
 
-**1.  Tahap persiapan data (_data preparation_)** dapat dilakukan dengan beberapa teknik, sebagai berikut:
-    -   Mengganggabungkan beberapa dataset untuk memperkaya informasi dan membuang data yang tidak diperlukan dalam model
-    -   Mengubah fitur kategori menjadi numerik dengan one-hot-encoding
-    -   Melakukan pembagian data menjadi data latih dan data uji dengan perbandingan rasio sebesar 90 : 10 yang akan digunakan ketika membangun model  _machine learning_.
-
-**2.	 Tahap analisis menggunakan EDA.**
+**1.	 Tahap analisis menggunakan EDA.**
 Exploratory Data Analysis (EDA) adalah bagian dari proses data science. EDA menjadi sangat penting sebelum melakukan feature engineering dan modeling karena dalam tahap ini kita harus memahami datanya terlebih dahulu.Exploratory Data Analysis memungkinkan analyst memahami isi data yang digunakan, mulai dari distribusi, frekuensi, korelasi dan lainnya [[4]](https://www.google.com/url?q=https%3A%2F%2Fmedium.com%2Fdata-folks-indonesia%2Fmemahami-data-dengan-exploratory-data-analysis-a53b230cce84).
 ![](https://media.geeksforgeeks.org/wp-content/uploads/20240509161456/Steps-for-Performing-Exploratory-Data-Analysis.png)
 sumber :  media.geeksforgeeks.org
@@ -64,7 +59,7 @@ sumber :  media.geeksforgeeks.org
 Meskipun proses EDA sangat fleksibel, secara umum, EDA dapat membantu kita menjawab berbagai pertanyaan fundamental tentang data, seperti karakteristik data, distribusi data, hubungan antar variabel, dan pola-pola yang tersembunyi di dalam data.
 Pada proyek ini kita juga akan memanfaatkan EDA untuk menangani rentang harga yang terlalu tinggi, data yang meyimpang jauh dari kumpulan data (outliers) , menangani missing value, serta menemukan fitur yang bermanfaat untuk model kita.
 
-**3.	  Dalam penelitian ini, kita akan membandingkan performa tiga algoritma pembelajaran mesin (KNN, Random Forest, dan AdaBoost)** untuk membangun model prediksi. Model dengan akurasi tertinggi akan dipilih sebagai model terbaik.
+**2.	  Dalam penelitian ini, kita akan membandingkan performa tiga algoritma pembelajaran mesin (KNN, Random Forest, dan AdaBoost)** untuk membangun model prediksi. Model dengan akurasi tertinggi akan dipilih sebagai model terbaik.
 
 
 **-	Algoritma k-Nearest Neighbor** 
