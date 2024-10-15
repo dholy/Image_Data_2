@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/d1497101-4cfa-41bc-ac28-7497dc4461ff)# Laporan Proyek Machine Learning - Doli sawaluddin
+# Laporan Proyek Machine Learning - Doli sawaluddin
 
 ## Domain Proyek
 ![9 Ikon Kota Bandung, Gedung Sate Hingga Masjid Terapung » Bandung Aktual](https://i0.wp.com/bandungaktual.com/wp-content/uploads/2013/10/kota-bandung-gedung-sate-1.jpg?fit=661%2C364&ssl=1)
