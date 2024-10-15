@@ -324,21 +324,29 @@ Pada tahapan ini hanya Mengganti nama kolom land_area menjadi land_area(m2) agar
 #### **2. Dataset Preparation pada Dataset tambahan**
 1.	Pertama, kita akan menyesuaikan data pada dataset *data_rumah* berdasarkan dataset  *results_cleaned*, dengan tahapan berikut:
 	-   Menyeragamkan alamat menjadi kecamatan, dengan memanfaatkan dataset *kelurahan.xlsx*
-	-   Menghapus kolom yang tidak dibutuhkan untuk analisa dan pembuatan model.
-	-	Menyesuaikan nama kolom pada dataset *data_rumah*  berdasarkan nama kolom *results_cleaned* agar kedua dataset bisa digabungkan
-	-	Menambahkan minimal kamar mandi untuk  dataset *data_rumah* , penambahan ini dilakukan untuk menyesuaikan nilai dengan dataset *results_cleaned*
+![image](https://github.com/user-attachments/assets/eec4363d-ed04-4a15-ac78-c4f9efaf2500)
+	-   Menghapus kolom Unnamed: 0, alamat, dan deskripsi yang tidak dibutuhkan untuk analisa dan pembuatan model.
+	-   Menyesuaikan nama kolom pada dataset *data_rumah*  berdasarkan nama kolom *results_cleaned* agar kedua dataset bisa digabungkan
+	-   Menambahkan minimal kamar mandi untuk  dataset *data_rumah* , penambahan ini dilakukan untuk menyesuaikan nilai dengan dataset *results_cleaned*
 	
 ![image](https://github.com/user-attachments/assets/a662f40f-7eef-4524-b4b9-7e5a04a44581)
 
-Berikut tampilan akhir rumah_2 (dataset *data_rumah*).
+Berikut tampilan akhir rumah_2 (dataset *data_rumah*):
 
 ![image](https://github.com/user-attachments/assets/1fd1040e-3f92-4ca0-b728-a5e60e1ebb4a)
 
 2.	 Kedua, Menggabungkan kedua dataset menjadi dataframe *rumah_bersih*, dan menghapus duplikat data berdasarkan kolom house name.
+![image](https://github.com/user-attachments/assets/87f330c1-eaa7-4476-93dc-c665e4b0254d)
+![image](https://github.com/user-attachments/assets/fbaa6396-79c5-4b8d-a29a-ac6a032603be)
+
 3.	 Ketiga, Mengubah ukuran price dari milyar ke juta untuk memudahkan pembacaan data.
+![image](https://github.com/user-attachments/assets/70f09242-a523-4315-8972-64eb65b1d0d1)
+
+4.	Tampilan data setelah melalui tahapan 2 dan 3 adalah sebagai berikut:
 
 ![image](https://github.com/user-attachments/assets/b5d7eb9d-d456-4844-81c6-72094b46c869)
-Total data setelah digabungkan adalah sebanyak 8243 data.
+
+Bisa kita lihat Total data setelah digabungkan adalah sebanyak 8243 data.
 
 #### **2. Encoding Fitur Kategori**
 Untuk mempersiapkan data kategorikal agar dapat diproses oleh algoritma machine learning, teknik one-hot encoding sering digunakan. Teknik ini mengubah setiap kategori menjadi sebuah fitur biner (0 atau 1), di mana nilai 1 menunjukkan keberadaan kategori tersebut. Scikit-learn menyediakan kelas OneHotEncoder yang memudahkan proses encoding ini.
