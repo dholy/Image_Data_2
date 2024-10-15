@@ -146,7 +146,7 @@ Dataset Utama diambil dari Dataset Kaggele [Daftar Harga Rumah di Kota Bandung](
 -   **land_area:**  Total luas tanah properti tersebut dalam meter persegi.
 -   **building_area:**  Total luas bangunan properti tersebut dalam meter persegi.
 
-Jumlah data yang terdapat pada data utama adalah 7609 baris dengan 8 kolom, berdasarkan informasi dari kaggle , data ini cukup bersih, namun kita tetap akan melakukan pengecekan ulang agar data sesuai dengan kebutuhan proyek.
+Jumlah data yang terdapat pada data utama adalah 7609 baris dengan 8 kolom, berdasarkan informasi dari kaggle , data ini cukup bersih, namun kita akan merubah nama kolom land_area menjadi land_area(m2) ,dan mengubah nilai price yang mencapai milyaran menjadi juta untuk memudahkan dalam pembacaan informasi didalam dataset.
   
 ### **Dataset Tambahan**  
 
@@ -170,13 +170,34 @@ Jumlah data yang terdapat pada dataset tambahan adalah 1470 baris dengan 8 kolom
 Dataset Pendukung [Datakelurahan](https://docs.google.com/spreadsheets/d/1Ub_VtM4_WMxCJeCSynKRtAhEonfzgRjI/export?format=xlsx&gid=371747489) , data ini diambil dari [stekom.ac.id](https://p2k.stekom.ac.id/ensiklopedia/Daftar_kecamatan_dan_kelurahan_di_Kota_Bandung) (Data pendukung 2). Tujuan dari data ini adalah untuk mengelompokkan alamat menjadi kecamatan.
 
 #### Variabel-variabel pada *kelurahan.xlsx* adalah sebagai berikut:
+![image](https://github.com/user-attachments/assets/cb9235f9-5e8b-456e-b5b8-b1b667bc899c)
+
  - **Kecamatan :** Nama kecamatan pada kota bandung
  - **Lokasi :** lokasi jalan, kelurahan, nama tempat dibandung
+
+Data set ini berisi alamat dan kecamatan dengan jumlah data 181 baris dan 2 kolom. Data ini nantinya akan digunakan untuk mengelompokkan alamat menjadi kecamatan pada *data_rumah.xlsx*
+
 
 **Total data yang digunakan adalah sebagai berikut:**
 results_cleaned :  7609
 data_rumah : 1470
 Total Data : 9079
+
+
+**Nilai yang hilang dan nilai duplikat**
+
+- Nilai Duplikat
+Nantinya setelah dilakukan penggabungan antara dataset utama dan dataset tambahan maka akan ditemukan duplikasi data sebagai berikut:
+Berikut adalah data yang terindikasi sebagai data yang sama(duplikat)
+
+![image](https://github.com/user-attachments/assets/fec28654-648a-42d4-bcb0-7ffaf8c0c62c)
+
+Dari gambar diatas bisa kita lihat terdapat duplikasi data sebanyak 1469 data, duplikasi ini terjadi karena kita menggabungkan dataset utama dan dataset tambahan. 
+
+- Nilai yang hilang
+
+
+
 
 ### **Exploratory Data Analysis.**
 Tahapan Selanjutnya setelah dataset sudah bersih adalah melakukan Exploratory Data Analysis.
