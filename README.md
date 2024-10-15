@@ -496,6 +496,7 @@ Akan tetapi Ketiga model yang telah dikembangkan, yakni model K-Nearest Neighbor
 
 ## Evaluation
 
+### **Metrik Evaluasi**
 Setelah membangun ketiga model (KNN, Random Forest, dan AdaBoost), kita akan mengevaluasi performanya menggunakan metrik Mean Squared Error (MSE). MSE akan menghitung rata-rata kuadrat selisih antara nilai prediksi model dengan nilai sebenarnya, baik pada data latih maupun data uji. Model dengan nilai MSE terendah dianggap sebagai model yang memiliki kinerja terbaik. Meskipun MSE mudah dihitung, namun interpretasi nilai mutlaknya perlu dilakukan dengan hati-hati karena tidak memberikan skala referensi yang jelas.
 
 $$MSE=\frac{1}{N}\sum_{i=1}^{N} (y_i-y\\_pred_i)^2$$
@@ -516,6 +517,22 @@ Dari data tabel tersebut dapat divisualisasikan pada grafik batang berikut.
 ![image](https://github.com/user-attachments/assets/b1bcda8a-7715-44e6-922e-0ec1a127e717)
 
 Berdasarkan hasil evaluasi model, algoritma RF memiliki nilai MSE terendah pada data testing. Hal ini mengindikasikan bahwa model RF memiliki performa yang lebih baik dalam memprediksi harga rumah dibandingkan dengan KNN dan Boosting. Model RF mampu menangkap pola yang kompleks dalam data dengan lebih baik, yang menyebabkan model ini memiliki kemampuan generalisasi yang lebih tinggi.
+
+### **Eksplorasi fitur-fitur yang bermanfaat**
+
+Dikarenakan kita tidak bisa menampilkan skor dengan heatmap yang disebabkan data kategori terlalu banyak maka kita akan menampilkan skornya dalam bentuk text sebagai berikut.
+
+![image](https://github.com/user-attachments/assets/a60c956e-2820-4d6a-9970-b062d106a9ee)
+
+Jika kita perhatikan fitur yang paling bermanfaat dalam menentukan harga rumah atau properti adalah luas tanah dan luas bangunan. jika kita lihat skornya yang hanya mencapai 79%, ini disebabkan karena harga propery mewah cenderung bervariasi dan lebih mahal dibandingkan harga rumah lainnya.
+
+Selanjutnya kita akan melihat fitur-fitur yang tidak terlalu berpengaruh terhadap harga jual rumah:
+
+![image](https://github.com/user-attachments/assets/2ab76d45-7928-4b83-8a77-6917ab18f243)
+
+Dari skor kolerasi antara fitur lainnya dengan harga menunjukkan bahwa :
+- jumlah kamar mandi dan kamar tidur tidak terlalu berpengaruh terhadap harga rumah, namun tetap bisa dijadikan sebagai tolak ukur dalam menentukan harga rumah walaupun tidak terlalu signifikan.
+- Berdasarkan skor diatas, kita dapat menyimpulkan bahwa lokasi tidak mempengaruhi harga rumah dikota bandung
 
 
 Tahapan terakhir adalah Menguji model dengan melakukan prediksi menggunakan beberapa data dari data test.
