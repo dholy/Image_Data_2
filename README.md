@@ -390,7 +390,30 @@ Langkah selanjutnya adalah menerapkan semua algoritma kedalam model diatas.
 
 ![image](https://github.com/user-attachments/assets/2cae9956-64ca-4546-acdb-174347513dae)
 
-Kode ini menginisialisasi model K-Nearest Neighbors (KNN) untuk regresi dengan jumlah tetangga (n_neighbors) yang diatur ke 10. Kemudian, model tersebut dilatih dengan data latih (X_train dan y_train). Terakhir, MSE (Mean Squared Error) dihitung pada data latih untuk mengukur seberapa baik model ini memprediksi harga rumah pada data yang telah digunakan untuk pelatihan.
+Penjelasan Cara Kerja KNN pada Kode di Atas
+
+1. Inisialisasi Model KNN:
+   - `knn = KNeighborsRegressor(n_neighbors=10)`: 
+     - Kode ini membuat objek model KNN dengan parameter `n_neighbors=10`.
+     - `n_neighbors` menentukan jumlah tetangga terdekat yang akan dipertimbangkan saat melakukan prediksi.
+     - Dalam kasus ini, model akan mencari 10 data point terdekat dengan data yang ingin diprediksi.
+
+2. Pelatihan Model:
+   - `knn.fit(X_train, y_train)`: 
+     - Metode `fit` digunakan untuk melatih model KNN dengan data training (`X_train` dan `y_train`).
+     - Pada tahap ini, model akan mempelajari pola dan hubungan antara fitur (X) dan target (y) dalam data training.
+     - Model akan menyimpan data training dalam bentuk struktur data yang memungkinkan pencarian tetangga terdekat dengan efisien.
+
+3. Evaluasi Model (Train MSE):
+   - `models.loc['train_mse','knn'] = mean_squared_error(y_pred = knn.predict(X_train), y_true=y_train)`:
+     - Setelah model dilatih, kita perlu mengukur performanya. Kode ini menghitung Mean Squared Error (MSE) pada data training.
+     - `knn.predict(X_train)`: Model digunakan untuk memprediksi harga (`y`) pada data training.
+     - `mean_squared_error(...)`:  MSE dihitung dengan membandingkan prediksi model (`y_pred`) dengan nilai aktual harga (`y_true`) dari data training.
+     - MSE merupakan ukuran kesalahan model dalam memprediksi harga pada data training. Nilai MSE yang rendah menunjukkan bahwa model memiliki performa baik pada data training.
+
+Secara singkat, KNN bekerja dengan mencari data point terdekat dengan data yang ingin diprediksi.
+Kemudian, berdasarkan harga dari tetangga terdekat tersebut, model akan membuat prediksi harga untuk data yang baru.
+Pada kode di atas, model KNN dilatih dengan data training dan kemudian performanya diukur dengan MSE pada data training.
 
 ### **2.  Random Forest Algorithm**
 
