@@ -317,15 +317,15 @@ Berdasarkan data ini kita bisa menghapus carport.
 Sesuai dengan penjelasan pada bagian "Solution Statements", tahap persiapan data (data preparation) merupakan langkah krusial sebelum memulai pelatihan model machine learning. Tujuannya adalah untuk mengolah data mentah agar sesuai dan optimal untuk digunakan dalam proses pembelajaran mesin.
 
 #### **1. Dataset Preparation**
-1.	Pertama, kita akan menyesuaikan data pada *data_rumah* berdasarkan dataset  *results_cleaned*, dengan tahapan berikut:
+1.	Pertama, kita akan menyesuaikan data pada dataset *data_rumah* berdasarkan dataset  *results_cleaned*, dengan tahapan berikut:
 	-   Menyeragamkan alamat menjadi kecamatan, dengan memanfaatkan dataset *kelurahan.xlsx*
 	-   Menghapus kolom yang tidak dibutuhkan untuk analisa dan pembuatan model.
 	-	Menyesuaikan nama kolom pada dataset *data_rumah*  berdasarkan nama kolom *results_cleaned* agar kedua dataset bisa digabungkan
-	-	Menambahkan minimal kamar mandi untuk  dataset *data_rumah* , penambahan ini dilakukan untuk menyusaikan nilai dengan dataset *results_cleaned*
+	-	Menambahkan minimal kamar mandi untuk  dataset *data_rumah* , penambahan ini dilakukan untuk menyesuaikan nilai dengan dataset *results_cleaned*
 	
 ![image](https://github.com/user-attachments/assets/a662f40f-7eef-4524-b4b9-7e5a04a44581)
 
-Berikut tampilan akhir data_rumah
+Berikut tampilan akhir rumah_2 (dataset *data_rumah*).
 
 ![image](https://github.com/user-attachments/assets/1fd1040e-3f92-4ca0-b728-a5e60e1ebb4a)
 
