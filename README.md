@@ -315,8 +315,7 @@ Berdasarkan data ini kita bisa menghapus carport.
 
 
 ## Data Preparation
-**Alasan mengapa diperlukan tahapan data preparation**
-Sesuai dengan penjelasan pada bagian "Solution Statements", tahap persiapan data (data preparation) merupakan langkah krusial sebelum memulai pelatihan model machine learning. Tujuannya adalah untuk mengolah data mentah agar sesuai dan optimal untuk digunakan dalam proses pembelajaran mesin.
+**Alasan mengapa diperlukan tahapan data preparation** adalah karena merupakan langkah krusial sebelum memulai pelatihan model machine learning. Tujuannya adalah untuk mengolah data mentah agar sesuai dan optimal untuk digunakan dalam proses pembelajaran mesin.
 
 #### **1. Dataset Preparation**
 1.	Pertama, kita akan menyesuaikan data pada dataset *data_rumah* berdasarkan dataset  *results_cleaned*, dengan tahapan berikut:
