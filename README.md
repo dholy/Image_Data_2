@@ -327,8 +327,7 @@ Pada tahapan ini hanya Mengganti nama kolom land_area menjadi land_area(m2) agar
 ![image](https://github.com/user-attachments/assets/eec4363d-ed04-4a15-ac78-c4f9efaf2500)
 	-   Menghapus kolom Unnamed: 0, alamat, dan deskripsi yang tidak dibutuhkan untuk analisa dan pembuatan model.
 	-   Menyesuaikan nama kolom pada dataset *data_rumah*  berdasarkan nama kolom *results_cleaned* agar kedua dataset bisa digabungkan
-	-   Menambahkan minimal kamar mandi untuk  dataset *data_rumah* , penambahan ini dilakukan untuk menyesuaikan nilai dengan dataset *results_cleaned*
-	
+	-   Menambahkan minimal kamar mandi untuk  dataset *data_rumah* , penambahan ini dilakukan untuk menyesuaikan nilai dengan dataset *results_cleaned*	
 ![image](https://github.com/user-attachments/assets/a662f40f-7eef-4524-b4b9-7e5a04a44581)
 
 Berikut tampilan akhir rumah_2 (dataset *data_rumah*):
