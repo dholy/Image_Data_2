@@ -350,7 +350,8 @@ Berikut tampilan akhir rumah_2 (dataset *data_rumah*):
 
 Bisa kita lihat Total data setelah digabungkan adalah sebanyak 8243 data.
 
-### **2. Penyesuaian Data setelah Proses Exploratory Data Analysis (EDA) **
+### **2. Penyesuaian Data setelah Proses Exploratory Data Analysis (EDA)**
+
 1.	Seperti yang dijelaskan Ketika melakukan analisa menggunakan EDA sebelumnya , ditemukan data yang tidak wajar (anomali) serta data dengan nilai nol, sehingga dilakukan penghapusan terhadap data tersebut:
 ![image](https://github.com/user-attachments/assets/5a92c8ef-4553-4e7b-a949-b57d8b4ccd89)
 
