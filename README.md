@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning - Doli sawaluddin
+![image](https://github.com/user-attachments/assets/d1497101-4cfa-41bc-ac28-7497dc4461ff)# Laporan Proyek Machine Learning - Doli sawaluddin
 
 ## Domain Proyek
 ![9 Ikon Kota Bandung, Gedung Sate Hingga Masjid Terapung » Bandung Aktual](https://i0.wp.com/bandungaktual.com/wp-content/uploads/2013/10/kota-bandung-gedung-sate-1.jpg?fit=661%2C364&ssl=1)
@@ -316,12 +316,13 @@ Berdasarkan data ini kita bisa menghapus carport.
 
 ## Data Preparation
 **Alasan mengapa diperlukan tahapan data preparation** adalah karena merupakan langkah krusial sebelum memulai pelatihan model machine learning. Tujuannya adalah untuk mengolah data mentah agar sesuai dan optimal untuk digunakan dalam proses pembelajaran mesin.
-#### **1. Dataset Preparation pada Dataset Utama**
+### **1. Dataset Preparation**
+#### **1.1. Dataset Preparation pada Dataset Utama**
 Pada tahapan ini hanya Mengganti nama kolom land_area menjadi land_area(m2) agar memudahkan pemaham terkait nilai didalamnya yang merupakan ukuran luas
 ![image](https://github.com/user-attachments/assets/418f62da-374b-48df-8efe-1f9003de80bc)
 
 
-#### **2. Dataset Preparation pada Dataset tambahan**
+#### **1.2. Dataset Preparation pada Dataset tambahan**
 1.	Pertama, kita akan menyesuaikan data pada dataset *data_rumah* berdasarkan dataset  *results_cleaned*, dengan tahapan berikut:
 	-   Menyeragamkan alamat menjadi kecamatan, dengan memanfaatkan dataset *kelurahan.xlsx*
 ![image](https://github.com/user-attachments/assets/eec4363d-ed04-4a15-ac78-c4f9efaf2500)
@@ -347,13 +348,26 @@ Berikut tampilan akhir rumah_2 (dataset *data_rumah*):
 
 Bisa kita lihat Total data setelah digabungkan adalah sebanyak 8243 data.
 
-#### **2. Encoding Fitur Kategori**
+### **2. Penyesuaian Data setelah Proses Exploratory Data Analysis (EDA) **
+1.	Seperti yang dijelaskan Ketika melakukan analisa menggunakan EDA sebelumnya , ditemukan data yang tidak wajar (anomali) serta data dengan nilai nol, sehingga dilakukan penghapusan terhadap data tersebut:
+![image](https://github.com/user-attachments/assets/5a92c8ef-4553-4e7b-a949-b57d8b4ccd89)
+
+bisa kita lihat total data sekarang telah berkurang menjadi 8037 baris dan 8 kolom baru.
+
+2.	Selanjutnya kita juga menghapus data outliers sehingga data berkurang lagi menjadi 6593 baris dengan 7 kolom baru,ini terjadi disebabkan kolom house_name telah dihapus karena tidak dibutuhkan untuk tahapan selanjutnya.
+![image](https://github.com/user-attachments/assets/bf9a763a-c2ce-41d0-84b0-fbad9eefe139)
+
+3.	Tahapan akhir kita mencoba mengurangi rentang harga yang terlalu tinggi menggunakan Winsorizing , Winsorizing akan menggantikan 5% nilai terendah dan 5% nilai tertinggi dalam kolom 'price (million)' dengan persentil ke-5 dan persentil ke-95, sehingga mengurangi pengaruh outlier pada distribusi harga.
+![image](https://github.com/user-attachments/assets/e1d47158-0717-46e6-8b9f-4773262f908f)
+
+
+### **3. Encoding Fitur Kategori**
 Untuk mempersiapkan data kategorikal agar dapat diproses oleh algoritma machine learning, teknik one-hot encoding sering digunakan. Teknik ini mengubah setiap kategori menjadi sebuah fitur biner (0 atau 1), di mana nilai 1 menunjukkan keberadaan kategori tersebut. Scikit-learn menyediakan kelas OneHotEncoder yang memudahkan proses encoding ini.
 
 ![image](https://github.com/user-attachments/assets/30d35651-ca46-4ce0-aa51-6facb687b2e8)
 Dapat kita lihat untuk setiap kategori dalam fitur location telah diubah kedalam bentuk biner.
 
-#### **3. Split Data**
+### **4. Split Data**
 Membagi data menjadi 90% untuk training dan 10% untuk test. Pembagian Data Latih (Train) 90% dan Data Uji (Test) 10% adalah praktik umum dalam machine learning. Tujuan utama dari pembagian ini adalah untuk mengevaluasi kinerja model secara objektif sebelum digunakan pada data yang benar-benar baru.
 
 ![image](https://github.com/user-attachments/assets/297a0fe3-e52a-463d-a2db-86ba405ec6be)
