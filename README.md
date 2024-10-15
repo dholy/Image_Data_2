@@ -534,6 +534,7 @@ Dari skor kolerasi antara fitur lainnya dengan harga menunjukkan bahwa :
 - jumlah kamar mandi dan kamar tidur tidak terlalu berpengaruh terhadap harga rumah, namun tetap bisa dijadikan sebagai tolak ukur dalam menentukan harga rumah walaupun tidak terlalu signifikan.
 - Berdasarkan skor diatas, kita dapat menyimpulkan bahwa lokasi tidak mempengaruhi harga rumah dikota bandung
 
+### **Menguji Model**
 
 Tahapan terakhir adalah Menguji model dengan melakukan prediksi menggunakan beberapa data dari data test.
 
