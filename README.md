@@ -190,14 +190,14 @@ Total Data : 9079
 - Nilai Duplikat
   
 Nantinya setelah dilakukan penggabungan antara dataset utama dan dataset tambahan maka akan ditemukan duplikasi data sebagai berikut:
-Berikut adalah data yang terindikasi sebagai data yang sama(duplikat)
 
 ![image](https://github.com/user-attachments/assets/fec28654-648a-42d4-bcb0-7ffaf8c0c62c)
 
-Dari gambar diatas bisa kita lihat terdapat duplikasi data sebanyak 1469 data, duplikasi ini terjadi karena kita menggabungkan dataset utama dan dataset tambahan. 
+Dari gambar diatas bisa kita lihat terdapat duplikasi data sebanyak 1469 data. Kita akan menghilangkan data ini untuk menjaga data agar tetap bersih.
 
 - Nilai yang hilang
 
+Bisa kita lihat, tidak ada nilai yang hilang pada data.
 
 
 
