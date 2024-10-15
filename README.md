@@ -419,28 +419,69 @@ Pada kode di atas, model KNN dilatih dengan data training dan kemudian performan
 
 ![image](https://github.com/user-attachments/assets/b91f3905-5b36-4ff8-b477-1d978c07c84f)
 
-Berikut Penjelasan tahapan pada kode diatas:
-1.	Inisialisasi model Random Forest dengan parameter tertentu:
-	- n_estimators: Jumlah pohon dalam forest (50).
-	- max_depth: Kedalaman maksimum setiap pohon (32).
-	- random_state: Untuk memastikan hasil yang konsisten setiap kali model dijalankan (55).
-	- n_jobs: Jumlah core CPU yang digunakan untuk pelatihan paralel (-1 berarti menggunakan semua core).
-2.	Melatih model Random Forest menggunakan data pelatihan (X_train dan y_train).
-3.	Menghitung Mean Squared Error (MSE) pada data pelatihan untuk mengevaluasi seberapa baik model 
-belajar dari data pelatihan.
+Penjelasan Cara Kerja Random Forest pada Kode di Atas adalah sebagai berikut:
+1. Inisialisasi Model Random Forest:
+   - `RF = RandomForestRegressor(n_estimators=50, max_depth=32, random_state=55, n_jobs=-1)`:
+     - Kode ini membuat objek model Random Forest dengan beberapa parameter:
+       - `n_estimators=50`: Jumlah pohon keputusan yang akan dibuat dalam ensemble. Semakin banyak pohon, semakin baik performanya, tetapi juga membutuhkan waktu yang lebih lama untuk melatih.
+       - `max_depth=32`: Kedalaman maksimum setiap pohon keputusan. Kedalaman pohon yang lebih besar memungkinkan model mempelajari pola yang lebih kompleks, tetapi juga berpotensi menyebabkan overfitting (model terlalu fokus pada data training dan performanya buruk pada data baru).
+       - `random_state=55`: Menentukan random seed untuk reproduksibilitas hasil. Dengan nilai yang sama, model akan menghasilkan hasil yang sama setiap kali dijalankan.
+       - `n_jobs=-1`: Menggunakan semua core CPU yang tersedia untuk mempercepat pelatihan model.
+
+2. Pelatihan Model:
+   - `RF.fit(X_train, y_train)`:
+     - Metode `fit` digunakan untuk melatih model Random Forest dengan data training (`X_train` dan `y_train`).
+     - Pada tahap ini, model akan membangun sejumlah pohon keputusan. Setiap pohon dibangun dengan menggunakan sampel data training yang berbeda (bootstrap aggregating atau bagging) dan subset fitur yang berbeda (random subspace).
+     - Setiap pohon akan mempelajari pola dan hubungan antara fitur (X) dan target (y) dalam data training yang diberikan.
+
+3. Evaluasi Model (Train MSE):
+   - `models.loc['train_mse','RandomForest'] = mean_squared_error(y_pred=RF.predict(X_train), y_true=y_train)`:
+     - Setelah model dilatih, kita perlu mengukur performanya. Kode ini menghitung Mean Squared Error (MSE) pada data training.
+     - `RF.predict(X_train)`: Model digunakan untuk memprediksi harga (`y`) pada data training.
+     - `mean_squared_error(...)`: MSE dihitung dengan membandingkan prediksi model (`y_pred`) dengan nilai aktual harga (`y_true`) dari data training.
+     - MSE merupakan ukuran kesalahan model dalam memprediksi harga pada data training. Nilai MSE yang rendah menunjukkan bahwa model memiliki performa baik pada data training.
+
+Secara singkat, Random Forest bekerja dengan membangun sejumlah pohon keputusan yang berbeda,
+masing-masing dilatih dengan sampel data dan fitur yang berbeda. 
+Kemudian, saat melakukan prediksi, setiap pohon akan memberikan hasil prediksinya sendiri.
+Hasil prediksi akhir diperoleh dengan menggabungkan (aggregasi) hasil prediksi dari semua pohon,
+misalnya dengan mengambil rata-rata prediksi untuk regresi.
+Pada kode di atas, model Random Forest dilatih dengan data training dan kemudian performanya diukur dengan MSE pada data training.
+
 
 ### **3.  Adaptive Boosting (AdaBoost) Algorithm**
 
 ![image](https://github.com/user-attachments/assets/e086ec67-fe9a-44db-a985-9256006bc6d1)
 
-Kode di atas melakukan tahapan berikut:
+Penjelasan Cara Kerja AdaBoost pada Kode di Atas:
+
 1. Inisialisasi Model AdaBoost:
-	   - `boosting = AdaBoostRegressor(learning_rate=0.05, random_state=55)`: Membuat objek model AdaBoostRegressor dengan learning rate 0.05 dan random_state 55 untuk reproduksibilitas hasil. 
-2. Melatih Model AdaBoost:
-	   - `boosting.fit(X_train, y_train)`: Melatih model AdaBoost dengan data latih (X_train, y_train). AdaBoost akan membangun sekumpulan model lemah (biasanya decision trees) dan menggabungkannya secara bertahap, memberikan bobot yang lebih besar pada data yang salah diprediksi oleh model sebelumnya.
-3. Menghitung Mean Squared Error (MSE) pada data latih:
-	   - `models.loc['train_mse','Boosting'] = mean_squared_error(y_pred=boosting.predict(X_train), y_true=y_train)`: 
-	     - Menghitung MSE antara prediksi dan nilai sebenarnya pada data latih. MSE mengukur rata-rata kuadrat selisih antara prediksi dan nilai aktual, semakin kecil MSE menunjukkan kinerja model yang lebih baik.
+   - `boosting = AdaBoostRegressor(learning_rate=0.05, random_state=55)`:
+     - Kode ini membuat objek model AdaBoost dengan beberapa parameter:
+       - `learning_rate=0.05`: Parameter ini mengontrol seberapa besar pengaruh setiap model "weak learner" terhadap model akhir. Nilai yang lebih rendah berarti bahwa setiap model memiliki pengaruh yang lebih kecil, dan model akan belajar lebih lambat.
+       - `random_state=55`: Menentukan random seed untuk reproduksibilitas hasil. Dengan nilai yang sama, model akan menghasilkan hasil yang sama setiap kali dijalankan.
+
+2. Pelatihan Model:
+   - `boosting.fit(X_train, y_train)`:
+     - Metode `fit` digunakan untuk melatih model AdaBoost dengan data training (`X_train` dan `y_train`).
+     - Pada tahap ini, model akan membangun sejumlah model "weak learner" (biasanya pohon keputusan yang sederhana) secara berurutan.
+     - Setiap "weak learner" akan dilatih dengan memperhatikan kesalahan yang dibuat oleh model sebelumnya.
+     - Data yang salah diprediksi oleh model sebelumnya akan diberi bobot yang lebih besar pada pelatihan model berikutnya, sehingga model berikutnya akan lebih fokus pada data yang sulit diprediksi.
+
+3. Evaluasi Model (Train MSE):
+   - `models.loc['train_mse','Boosting'] = mean_squared_error(y_pred=boosting.predict(X_train), y_true=y_train)`:
+     - Setelah model dilatih, kita perlu mengukur performanya. Kode ini menghitung Mean Squared Error (MSE) pada data training.
+     - `boosting.predict(X_train)`: Model digunakan untuk memprediksi harga (`y`) pada data training.
+     - `mean_squared_error(...)`: MSE dihitung dengan membandingkan prediksi model (`y_pred`) dengan nilai aktual harga (`y_true`) dari data training.
+     - MSE merupakan ukuran kesalahan model dalam memprediksi harga pada data training. Nilai MSE yang rendah menunjukkan bahwa model memiliki performa baik pada data training.
+
+Secara singkat, AdaBoost bekerja dengan membangun serangkaian model "weak learner" secara berurutan.
+Setiap model berikutnya akan fokus pada data yang sulit diprediksi oleh model sebelumnya.
+Hasil prediksi akhir diperoleh dengan menggabungkan hasil prediksi dari semua "weak learner",
+dengan memberikan bobot yang lebih besar pada model yang memiliki performa lebih baik.
+Pada kode di atas, model AdaBoost dilatih dengan data training dan kemudian performanya diukur dengan MSE pada data training.
+
+
 	
 
 ### **4. Pertimbangan untuk Dataset dengan Banyak Fitur:**
