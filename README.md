@@ -336,15 +336,15 @@ Berikut tampilan akhir rumah_2 (dataset *data_rumah*):
 ![image](https://github.com/user-attachments/assets/1fd1040e-3f92-4ca0-b728-a5e60e1ebb4a)
 
 2.	 Kedua, Menggabungkan kedua dataset menjadi dataframe *rumah_bersih*, dan menghapus duplikat data berdasarkan kolom house name.
-3.	 
+	 
 ![image](https://github.com/user-attachments/assets/87f330c1-eaa7-4476-93dc-c665e4b0254d)
 
 ![image](https://github.com/user-attachments/assets/fbaa6396-79c5-4b8d-a29a-ac6a032603be)
 
-5.	 Ketiga, Mengubah ukuran price dari milyar ke juta untuk memudahkan pembacaan data.
+3.	 Ketiga, Mengubah ukuran price dari milyar ke juta untuk memudahkan pembacaan data.
 ![image](https://github.com/user-attachments/assets/70f09242-a523-4315-8972-64eb65b1d0d1)
 
-6.	Tampilan data setelah melalui tahapan 2 dan 3 adalah sebagai berikut:
+4.	Tampilan data setelah melalui tahapan 2 dan 3 adalah sebagai berikut:
 
 ![image](https://github.com/user-attachments/assets/b5d7eb9d-d456-4844-81c6-72094b46c869)
 
