@@ -130,11 +130,11 @@ Secara runtun, cara kerja algoritma ini dapat dijabarkan sebagai berikut:
 
 Pada proyek ini kita akan menggunakan 3 dataset dengan 1 dataset utama ,1 dataset untuk menambah jumlah data dan 1 dataset pendukung untuk melengkapi alamat kecamatan. Dataset yang digunakan adalah sebagai berikut:
 
-### **Dataset Utama**  
+#### **Dataset Utama**  
 
 Dataset Utama diambil dari Dataset Kaggele [Daftar Harga Rumah di Kota Bandung](https://www.kaggle.com/datasets/khaleeel347/harga-rumah-seluruh-kecamatan-di-kota-bandung). Didalam dataset tersebut terdapat file yang akan kita gunakan dengan nama *results_cleaned.csv*
 
-#### Variabel-variabel pada *results_cleaned.csv* adalah sebagai berikut:
+##### Variabel-variabel pada *results_cleaned.csv* adalah sebagai berikut:
 ![variabel1](https://github.com/user-attachments/assets/31c43ddf-1594-4758-9e6a-f2be67e4b315)
 
 -   **house_name:**  Nama atau judul properti residensial.
@@ -148,11 +148,11 @@ Dataset Utama diambil dari Dataset Kaggele [Daftar Harga Rumah di Kota Bandung](
 
 Jumlah data yang terdapat pada data utama adalah 7609 baris dengan 8 kolom, berdasarkan informasi dari kaggle , data ini cukup bersih, namun kita akan merubah nama kolom land_area menjadi land_area(m2) ,dan mengubah nilai price yang mencapai milyaran menjadi juta untuk memudahkan dalam pembacaan informasi didalam dataset.
   
-### **Dataset Tambahan**  
+#### **Dataset Tambahan**  
 
 Dataset yang digunakan untuk menambah jumlah data diambil dari Dataset Kaggele [Dataset Harga Rumah Bandung](https://www.kaggle.com/datasets/rafliaping/dataset-harga-rumah-bandung) (Data pendukung 1). file yang akan kita gunakan bernama *data_rumah.xlsx*
 
-#### Variabel-variabel pada *data_rumah.xlsx* adalah sebagai berikut:
+##### Variabel-variabel pada *data_rumah.xlsx* adalah sebagai berikut:
 ![image](https://github.com/user-attachments/assets/123384c8-8e24-4d1b-b435-1fc911a20d77)
 
  - **Unnamed: 0 ,** Berisi nomor urut
@@ -166,10 +166,10 @@ Dataset yang digunakan untuk menambah jumlah data diambil dari Dataset Kaggele [
 
 Jumlah data yang terdapat pada dataset tambahan adalah 1470 baris dengan 8 kolom, kondisi data masih perlu dilakukan penyesuaian dengan data utama *results_cleaned* supaya nantinya kedua dataset dapat digabungkan.
 
-### **Dataset Pendukung**  
+#### **Dataset Pendukung**  
 Dataset Pendukung [Datakelurahan](https://docs.google.com/spreadsheets/d/1Ub_VtM4_WMxCJeCSynKRtAhEonfzgRjI/export?format=xlsx&gid=371747489) , data ini diambil dari [stekom.ac.id](https://p2k.stekom.ac.id/ensiklopedia/Daftar_kecamatan_dan_kelurahan_di_Kota_Bandung) (Data pendukung 2). Tujuan dari data ini adalah untuk mengelompokkan alamat menjadi kecamatan.
 
-#### Variabel-variabel pada *kelurahan.xlsx* adalah sebagai berikut:
+#####  Variabel-variabel pada *kelurahan.xlsx* adalah sebagai berikut:
 ![image](https://github.com/user-attachments/assets/cb9235f9-5e8b-456e-b5b8-b1b667bc899c)
 
  - **Kecamatan :** Nama kecamatan pada kota bandung
@@ -178,25 +178,7 @@ Dataset Pendukung [Datakelurahan](https://docs.google.com/spreadsheets/d/1Ub_VtM
 Data set ini berisi alamat dan kecamatan dengan jumlah data 181 baris dan 2 kolom. Data ini nantinya akan digunakan untuk mengelompokkan alamat menjadi kecamatan pada *data_rumah.xlsx*
 
 
-**Total data yang digunakan adalah sebagai berikut:**
-
-results_cleaned :  7609
-
-data_rumah : 1470
-
-Total Data : 9079
-
-
-**Data Bersih**
-
-![image](https://github.com/user-attachments/assets/bffdb837-0fb6-46ee-a3ed-f7202fd06b6f)
-
-Setelah dilakukan penggabungan dan pembersihan data,maka kita mendapatkan data akhir dengan total data sebanyak 8243 baris dengan 8 kolom.
-
-
-
-
-**Nilai yang hilang dan nilai duplikat**
+##### **Nilai yang hilang dan nilai duplikat**
 
 - Nilai Duplikat
   
@@ -211,6 +193,13 @@ Dari gambar diatas bisa kita lihat terdapat duplikasi data sebanyak 1469 data. K
 ![image](https://github.com/user-attachments/assets/f6c87078-0b58-4d91-93e9-0dcf4f67b00e)
 
 Bisa kita lihat, tidak ada nilai yang hilang pada data.
+
+##### **Data Bersih**
+
+![image](https://github.com/user-attachments/assets/bffdb837-0fb6-46ee-a3ed-f7202fd06b6f)
+
+Setelah dilakukan penggabungan dan pembersihan data,maka kita mendapatkan data akhir dengan total data sebanyak 8243 baris dengan 8 kolom.
+
 
 
 
