@@ -200,6 +200,8 @@ Dari gambar diatas bisa kita lihat terdapat duplikasi data sebanyak 1469 data. K
 
 - Nilai yang hilang
 
+![image](https://github.com/user-attachments/assets/f6c87078-0b58-4d91-93e9-0dcf4f67b00e)
+
 Bisa kita lihat, tidak ada nilai yang hilang pada data.
 
 
