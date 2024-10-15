@@ -181,8 +181,11 @@ Data set ini berisi alamat dan kecamatan dengan jumlah data 181 baris dan 2 kolo
 **Total data yang digunakan adalah sebagai berikut:**
 
 results_cleaned :  7609
+
 data_rumah : 1470
+
 Total Data : 9079
+
 
 
 **Nilai yang hilang dan nilai duplikat**
