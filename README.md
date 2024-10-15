@@ -373,6 +373,7 @@ Dapat kita lihat untuk setiap kategori dalam fitur location telah diubah kedalam
 Membagi data menjadi 90% untuk training dan 10% untuk test. Pembagian Data Latih (Train) 90% dan Data Uji (Test) 10% adalah praktik umum dalam machine learning. Tujuan utama dari pembagian ini adalah untuk mengevaluasi kinerja model secara objektif sebelum digunakan pada data yang benar-benar baru.
 
 ![image](https://github.com/user-attachments/assets/297a0fe3-e52a-463d-a2db-86ba405ec6be)
+
 Setelah dilakukan pembagian data , kita mendapatkan data training sebanyak 5933 data dan data test sebanyak 660 data.
 
 
