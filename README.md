@@ -543,9 +543,11 @@ Tahapan terakhir adalah Menguji model dengan melakukan prediksi menggunakan bebe
 Dari 10 prediksi diatas bisa kita lihat pada kolom diff_RF, dimana selisih antara data sebenarnya  *(y_true )* dengan data prediksi sangat kecil dibandingkan selisih pada KNN dan boosting.
 
 
-## **Kesimpulan**
+### **Kesimpulan**
 
 Berdasarkan perbandingan prediksi dengan nilai sebenarnya, dapat disimpulkan bahwa ketiga model (KNN, RF, dan Boosting) mampu memprediksi harga rumah dengan cukup baik. Namun, Random Forest memiliki keunggulan dalam hal akurasi dan kemampuan generalisasi, sehingga menjadi pilihan yang lebih baik untuk memprediksi harga rumah pada dataset ini.
+
+Model yang telah dibangun dapat digunakan dalam membantu perusahaan dan investor dalam menganalisa harga property dipasaran dengan memperhatikan berbagai fitur-fitur yang ada seperti jumlah kamar ,luas area. serta membantu pengambilan keputusan sebelum melakukan pembelian atau penjualan property rumah.
 
 
 ## Referensi
