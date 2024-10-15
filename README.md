@@ -128,10 +128,10 @@ Secara runtun, cara kerja algoritma ini dapat dijabarkan sebagai berikut:
 
 ## Data Understanding
 
-Pada proyek ini kita akan menggunakan 3 dataset dengan 1 dataset utama ,1 dataset untuk menambah jumlah data dan 1 dataset pendukung untuk melengkapi data. Dataset yang digunakan adalah sebagai berikut:
- - [Daftar Harga Rumah di Kota Bandung](https://www.kaggle.com/datasets/khaleeel347/harga-rumah-seluruh-kecamatan-di-kota-bandung) (Data utama). Dataset yang akan kita gunakan bernama *results_cleaned.csv*
- - [Dataset Harga Rumah Bandung](https://www.kaggle.com/datasets/rafliaping/dataset-harga-rumah-bandung) (Data pendukung 1). Dataset yang akan kita gunakan bernama *data_rumah.xlsx*
- - [Datakelurahan](https://docs.google.com/spreadsheets/d/1Ub_VtM4_WMxCJeCSynKRtAhEonfzgRjI/export?format=xlsx&gid=371747489) , data ini diambil dari [stekom.ac.id](https://p2k.stekom.ac.id/ensiklopedia/Daftar_kecamatan_dan_kelurahan_di_Kota_Bandung) (Data pendukung 2).
+Pada proyek ini kita akan menggunakan 3 dataset dengan 1 dataset utama ,1 dataset untuk menambah jumlah data dan 1 dataset pendukung untuk melengkapi alamat kecamatan. Dataset yang digunakan adalah sebagai berikut:
+ - Dataset Utama diambil dari Dataset Kaggele [Daftar Harga Rumah di Kota Bandung](https://www.kaggle.com/datasets/khaleeel347/harga-rumah-seluruh-kecamatan-di-kota-bandung). Didalam dataset tersebut terdapat file yang akan kita gunakan dengan nama *results_cleaned.csv*
+ - Dataset yang digunakan untuk menambah jumlah data diambil dari Dataset Kaggele[Dataset Harga Rumah Bandung](https://www.kaggle.com/datasets/rafliaping/dataset-harga-rumah-bandung) (Data pendukung 1). file yang akan kita gunakan bernama *data_rumah.xlsx*
+ - Dataset Pendukung [Datakelurahan](https://docs.google.com/spreadsheets/d/1Ub_VtM4_WMxCJeCSynKRtAhEonfzgRjI/export?format=xlsx&gid=371747489) , data ini diambil dari [stekom.ac.id](https://p2k.stekom.ac.id/ensiklopedia/Daftar_kecamatan_dan_kelurahan_di_Kota_Bandung) (Data pendukung 2). Tujuan dari data ini adalah untuk mengelompokkan alamat menjadi kecamatan.
 
 ### **Deskripsi Variabel**  
 
