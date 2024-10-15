@@ -545,9 +545,7 @@ Dari 10 prediksi diatas bisa kita lihat pada kolom diff_RF, dimana selisih antar
 
 ### **Kesimpulan**
 
-Berdasarkan perbandingan prediksi dengan nilai sebenarnya, dapat disimpulkan bahwa ketiga model (KNN, RF, dan Boosting) mampu memprediksi harga rumah dengan cukup baik. Namun, Random Forest memiliki keunggulan dalam hal akurasi dan kemampuan generalisasi, sehingga menjadi pilihan yang lebih baik untuk memprediksi harga rumah pada dataset ini.
-
-Model yang telah dibangun dapat digunakan dalam membantu perusahaan dan investor dalam menganalisa harga property dipasaran dengan memperhatikan berbagai fitur-fitur yang ada seperti jumlah kamar ,luas area. serta membantu pengambilan keputusan sebelum melakukan pembelian atau penjualan property rumah.
+Berdasarkan perbandingan prediksi dengan nilai sebenarnya, dapat disimpulkan bahwa ketiga model (KNN, RF, dan Boosting) yang telah kita bangun mampu memprediksi harga rumah dengan cukup baik. Namun, Random Forest memiliki keunggulan dalam hal akurasi dan kemampuan generalisasi, sehingga menjadi pilihan yang lebih baik untuk memprediksi harga rumah pada dataset ini. Serta Jika dilihat dari berbagai tahapan diatas ,Exploratory Data Analysis (EDA) ternyata dapat membantu dalam menemukan fitur-fitur yang bermanfaat untuk memprediksi harga rumah. Model yang telah dibangun dapat digunakan dalam membantu perusahaan dan investor dalam menganalisa harga property dipasaran dengan memperhatikan berbagai fitur-fitur yang ada seperti jumlah kamar ,luas area. serta membantu pengambilan keputusan sebelum melakukan pembelian atau penjualan property rumah.
 
 
 ## Referensi
