@@ -144,7 +144,7 @@ Dataset Utama diambil dari Dataset Kaggele [Daftar Harga Rumah di Kota Bandung](
 -   **carport_count:**  Jumlah tempat parkir/garasi yang tersedia pada properti tersebut.
 -   **price:**  Harga properti tersebut dalam Rupiah Indonesia (IDR).
 -   **land_area:**  Total luas tanah properti tersebut dalam meter persegi.
--   **building_area:**  Total luas bangunan properti tersebut dalam meter persegi.
+-   **building_area (m2):**  Total luas bangunan properti tersebut dalam meter persegi.
 
 Jumlah data yang terdapat pada data utama adalah 7609 baris dengan 8 kolom, berdasarkan informasi dari kaggle , data ini cukup bersih, namun kita akan merubah nama kolom land_area menjadi land_area(m2) ,dan mengubah nilai price yang mencapai milyaran menjadi juta untuk memudahkan dalam pembacaan informasi didalam dataset.
   
@@ -156,7 +156,7 @@ Dataset yang digunakan untuk menambah jumlah data diambil dari Dataset Kaggele [
 ![image](https://github.com/user-attachments/assets/123384c8-8e24-4d1b-b435-1fc911a20d77)
 
  - **Unnamed: 0 ,** Berisi nomor urut
- - **Judul :** berisi text promosi
+ - **Judul :** berisi text promosi ataupun nama rumah
  - **alamat :** lokasi rumah
  - **deskripsi :** berisi keterangan dari rumah
  - **kamar :** Jumlah kamar tidur di properti tersebut.
@@ -178,7 +178,7 @@ Dataset Pendukung [Datakelurahan](https://docs.google.com/spreadsheets/d/1Ub_VtM
 Data set ini berisi alamat dan kecamatan dengan jumlah data 181 baris dan 2 kolom. Data ini nantinya akan digunakan untuk mengelompokkan alamat menjadi kecamatan pada *data_rumah.xlsx*
 
 
-##### **Nilai yang hilang dan nilai duplikat**
+#### **Nilai yang hilang dan nilai duplikat**
 
 - Nilai Duplikat
   
