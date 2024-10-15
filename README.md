@@ -39,14 +39,12 @@ Sebenarnya telah banyak penelitian yang melakukan prediksi harga rumah, salah sa
 ### Problem Statements
 
 Berdasarkan latar belakang diatas maka didapatkan rumusan permasalahan sebagai berikut:
-- Bagaimana cara mempersiapkan data agar bisa diterapkan pada model machine learning?
 - Bagaimana cara menganalisa fitur yang bermanfaat dalam predisiksi harga rumah?
 - Bagaimana cara membangun model machine Learning untuk memprediksi harga rumah ?
 
 ### Goals
 
 Berdasarkan pernyataan masalah diatas maka dapat kita tentukan tujuan sebagai berikut:
-- Melakukan tahap *data preparation* agar data mudah diterapkan ke model.
 - Melakukan analisa menggunakan  Exploratory Data Analysis (EDA) untuk menemukan fitur yang bermanfaat untuk model.
 - Membangun model machine learning yang dapat melakukan predikisi harga rumah dengan baik.
 
