@@ -186,7 +186,7 @@ Nantinya setelah dilakukan penggabungan antara dataset utama dan dataset tambaha
 
 ![image](https://github.com/user-attachments/assets/fec28654-648a-42d4-bcb0-7ffaf8c0c62c)
 
-Dari gambar diatas bisa kita lihat terdapat duplikasi data sebanyak 1469 data. Kita akan menghilangkan data ini untuk menjaga data agar tetap bersih.
+Dari gambar diatas bisa kita lihat terdapat duplikasi data sebanyak 1469 data. Kita akan menghilangkan data ini pada tahap data preparation untuk menjaga data agar tetap bersih.
 
 - Nilai yang hilang
 
@@ -194,11 +194,12 @@ Dari gambar diatas bisa kita lihat terdapat duplikasi data sebanyak 1469 data. K
 
 Bisa kita lihat, tidak ada nilai yang hilang pada data.
 
-#### **Data Bersih**
 
-![image](https://github.com/user-attachments/assets/bffdb837-0fb6-46ee-a3ed-f7202fd06b6f)
+#### **5. Gabungan Dataset Utama dan Dataset Tambahan**
 
-Setelah dilakukan penggabungan dan pembersihan data,maka kita mendapatkan data akhir dengan total data sebanyak 8243 baris dengan 8 kolom.
+![image](https://github.com/user-attachments/assets/9eb36674-8734-4c8d-a322-d49b38dc86cd)
+
+Setelah dilakukan pembersihan dan penggabungan data,maka kita mendapatkan data akhir dengan total data sebanyak 8243 baris dengan 8 kolom. Untuk deskripsi variabel atau keterangan kolom mengikuti Dataset utama.
 
 
 
@@ -210,7 +211,7 @@ Tahapan Selanjutnya setelah dataset sudah bersih adalah melakukan Exploratory Da
 
 ![image](https://github.com/user-attachments/assets/6ca990c9-211f-4f48-a0c9-6a1eab7ba970)
 
-Berdasarkan output diatas bisa kita lihat terdapat 6 atribut dengan tipe data int64 dan 2 atribut bertipe object yang berisi nama dan lokasi properti.dari data tersebut didapat klasifikasi sebagai beriku:
+Berdasarkan output diatas bisa kita lihat terdapat 6 atribut dengan tipe data int64 dan 2 atribut bertipe object yang berisi nama dan lokasi properti.dari data tersebut didapat klasifikasi sebagai berikut:
 -   categorical features (fitur non-numerik): house name , location
 -   numerical features (fitur numerik): bedroom_count, bathroom_count, carport_count, price, land_area(m2), building_area (m2)
 
@@ -218,7 +219,7 @@ Berdasarkan output diatas bisa kita lihat terdapat 6 atribut dengan tipe data in
 
 ![image](https://github.com/user-attachments/assets/3e55728f-19d2-40e2-ba49-afe674ca09a8)
 
-Data di atas memberikan ringkasan statistik deskriptif dari fitur-fitur numerik dalam dataset.Ringkasan statistik ini memberikan gambaran awal tentang distribusi dan karakteristik data.
+Data di atas memberikan ringkasan statistik deskriptif dari fitur-fitur numerik dalam dataset. Ringkasan statistik ini memberikan gambaran awal tentang distribusi dan karakteristik data.
 Keterangan:
 -   **count:**  Jumlah data yang tidak kosong (non-missing) untuk setiap kolom.
 -   **mean:**  Rata-rata dari nilai-nilai dalam kolom.
@@ -231,49 +232,42 @@ Keterangan:
 
 Jika kita perhatikan minimal nilai pada propery adalah 0. Di zaman sekarang ini sebuah rumah memiliki minimal 1 kamar tidur dan 1 kamar mandi, sehingga kita perlu curiga jika data tersebut merupakan data yang salah, serta terdapat anomali data pada land area dan building area,dimana tidak mungkin luas area memiliki luas dengan nilai minus atau 0.
 
-**3.	Menangani  Anomali dan Missing Value**
+**3.	Anomali dan Missing Value**
+![image](https://github.com/user-attachments/assets/03f13492-e6e9-41a5-9d0b-cc0202ac106d)
 
-![image](https://github.com/user-attachments/assets/4f22c145-af19-4419-af39-d5dbeb2d9b27)
+Dari data diatas dapat kita lihat terdapat missing value  (nilai 0) pada bedroom dan bathroom serta anomali pada building area dan land_area dimana terdapat luas bangunan bernilai minus dan nol. Sedangkan Untuk carport_count tidak perlu dihiraukan karena beberapa rumah memang bisa tidak memiliki parkiran. Kita akan menghapus data ini pada tahap data preparation.
 
-Dari data diatas dapat kita lihat terdapat missing value pada bedroom dan bathroom serta anomali pada building area dan land_area dimana terdapat luas bangunan bernilai minus dan nol. Sedangkan Untuk carport_count tidak perlu dihiraukan karena beberapa rumah memang bisa tidak memiliki parkiran
+**4.	Outliers**
 
-**4.	Menangani Outliers**
-
-Tahapan selanjutnya adalah melakukan deteksi outliers pada dataframe. Outliers adalah data yang nilainya jauh menyimpang dari distribusi data mayoritas. Untuk mendeteksi outliers ini, kita akan memvisualisasikan datanya menggunakan boxplot dengan bantuan library Seaborn.
+Outliers adalah data yang nilainya jauh menyimpang dari distribusi data mayoritas. Untuk mendeteksi outliers ini, kita akan memvisualisasikan datanya menggunakan boxplot dengan bantuan library Seaborn.
 Untuk Menangani outlier kita akan menggunakan IQR (Inter Quartile Range) Method , berikut adalah bentuk persamaannya:
 
 Batas bawah = Q1 - 1.5 * IQR
 
 Batas atas = Q3 + 1.5 * IQR
 
+Tampilan Outliers pada dataset:
 
 ![image](https://github.com/user-attachments/assets/e1ec5fb3-066f-4996-9364-7d79c8056d8a)
 
-Bisa kita lihat terdapat data yang sangat jauh dari kelompok data pada fitur bedroom count, bathroom count, carport count, land area dan building area. pada tahap selanjutnya kita akan mencoba menghilangkan outlier tersebut.
-
-![image](https://github.com/user-attachments/assets/f7b998e6-4f99-4e1c-93c2-8b07404aa8c6)
-
-Berikut adalah tampilan data yang sudah dibersihkan outliersnya :
-
-![image](https://github.com/user-attachments/assets/731b6cb9-dda5-4f81-8eb7-c5b9be94445c)
-
-Berdasarkan data-data yang ditampilkan diatas, kita bisa melihat data sudah dibersihkan dan total data yang telah dibersihkan tersisa 6593 data, dan akan kita gunakan pada tahapan selanjutnya.
+Bisa kita lihat terdapat data yang sangat jauh dari kelompok data pada fitur bedroom count, bathroom count, carport count, land area dan building area. Sehingga kita perlu menghilangkan outlier tersebut pada tahap data preparation.
 
 **5.	EDA-Univariate Analysis**
 
 ![image](https://github.com/user-attachments/assets/94f734c4-18fb-4d95-a763-621552e551ac)
 
-Terdapat 30 kecamatan pada kota bandung yang menjadi lokasi properti. Dari data tersebut bisa kita lihat penjualan properti paling banyak berada di kecamatan Arcamanik, buahbatu, dan daerah kota bandung, serta penjulan properti paling sedikit berada pada kecamatan cibeunying kaler dan cinambo
+Terdapat 30 kecamatan pada kota bandung yang menjadi lokasi properti. Dari data tersebut bisa kita lihat penjualan properti paling banyak berada di kecamatan Arcamanik, buahbatu, dan daerah kota bandung, serta penjulan properti paling sedikit berada pada kecamatan cibeunying kaler dan cinambo.
+
 
 ![image](https://github.com/user-attachments/assets/db9c6953-f65f-425c-9744-40ed3198b652)
 
 Berdasarkan histogram diatas kita bisa melihat distribusi data pada setiap fitur numerik, berikut penjelasan detailnya:
- -  Bedroom Count: Sebagian besar rumah memiliki jumlah kamar tidur antara 2 sampai 4, dengan sedikit rumah yang memiliki jumlah kamar tidur lebih dari 4. Ini menunjukkan bahwa rumah dengan 2-4 kamar tidur adalah yang paling umum di pasaran.
-- Bathroom Count: Distribusi data mirip dengan bedroom count, dengan sebagian besar rumah memiliki 2-3 kamar mandi. Hal ini mengindikasikan korelasi antara jumlah kamar tidur dan kamar mandi.
- -  Carport Count: Sebagian besar rumah memiliki carport dengan kapasitas 1-2 mobil.
- -  Price: Distribusi harga rumah cenderung miring ke kanan (right skewed), yang menunjukkan bahwa ada beberapa rumah dengan harga yang sangat tinggi dibandingkan dengan sebagian besar rumah. Ini adalah fenomena umum pada pasar properti, di mana beberapa properti mewah memiliki harga yang jauh lebih tinggi daripada rata-rata.
- -  Land Area: Data land area juga cenderung miring ke kanan. Artinya, sebagian besar rumah memiliki luas tanah yang relatif kecil, tetapi ada beberapa rumah yang memiliki luas tanah yang sangat besar.
- -  Building Area: Distribusi building area juga mirip dengan land area, cenderung miring ke kanan. Ini menunjukkan bahwa sebagian besar rumah memiliki luas bangunan yang relatif kecil, tetapi ada beberapa rumah dengan luas bangunan yang sangat besar.
+ -  **Bedroom Count:** Sebagian besar rumah memiliki jumlah kamar tidur antara 2 sampai 4, dengan sedikit rumah yang memiliki  jumlah kamar tidur lebih dari 4. Ini menunjukkan bahwa rumah dengan 2-4 kamar tidur adalah yang paling umum di pasaran.
+- **Bathroom Count:** Distribusi data mirip dengan bedroom count, dengan sebagian besar rumah memiliki 2-3 kamar mandi. Hal ini mengindikasikan korelasi antara jumlah kamar tidur dan kamar mandi.
+ -  **Carport Count:** Sebagian besar rumah memiliki carport dengan kapasitas 1-2 mobil.
+ -  **Price:** Distribusi harga rumah cenderung miring ke kanan (right skewed), yang menunjukkan bahwa ada beberapa rumah dengan harga yang sangat tinggi dibandingkan dengan sebagian besar rumah. Ini adalah fenomena umum pada pasar properti, di mana beberapa properti mewah memiliki harga yang jauh lebih tinggi daripada rata-rata.
+ -  **Land Area:** Data land area juga cenderung miring ke kanan. Artinya, sebagian besar rumah memiliki luas tanah yang relatif kecil, tetapi ada beberapa rumah yang memiliki luas tanah yang sangat besar.
+ -  **Building Area:** Distribusi building area juga mirip dengan land area, cenderung miring ke kanan. Ini menunjukkan bahwa sebagian besar rumah memiliki luas bangunan yang relatif kecil, tetapi ada beberapa rumah dengan luas bangunan yang sangat besar.
     
     Kesimpulan: Dari histogram ini, kita bisa memahami distribusi data pada setiap fitur numerik. Selain itu, kita juga bisa melihat pola-pola tertentu, seperti korelasi antara jumlah kamar tidur dan kamar mandi, serta keberadaan outlier pada harga, luas tanah, dan luas bangunan. Informasi ini bisa membantu kita untuk lebih memahami karakteristik pasar properti di Bandung dan membantu dalam proses pembuatan model prediksi.
 
@@ -281,7 +275,7 @@ Berdasarkan histogram diatas kita bisa melihat distribusi data pada setiap fitur
 
 ![image](https://github.com/user-attachments/assets/b42a647f-79e6-4fb0-8064-8367dfce20ea)
 
-Perhatikan rentang harga sudah lebih baik dibandingkan sebelumnya. Berdasarkan data diatas maka dapat disimpulkan:
+Perhatikan rentang harga diatas, berdasarkan data diatas maka dapat disimpulkan:
 - Rata-rata harga properti: 2226.20 juta
 - Kecamatan sumurbandung dan bandung wetan memiliki property degan harga jual yang cukup tinggi
 - Property dengan harga termurah berada di kecamatan cibiru dan ujungberung.
@@ -309,10 +303,6 @@ Berdasarkan heatmap korelasi yang ditampilkan, kita dapat mengamati hubungan ant
 2.  Korelasi Lemah:
     -   Antara 'carport_count' dan 'price (million)': Korelasi positif yang lemah (0.31), menunjukkan bahwa pengaruh jumlah carport terhadap harga rumah relatif kecil.
 
-Berdasarkan data ini kita bisa menghapus carport.
-
-![image](https://github.com/user-attachments/assets/76f9636f-b81e-4f25-a057-f986f836004f)
-
 
 ## Data Preparation
 **Alasan mengapa diperlukan tahapan data preparation** adalah karena merupakan langkah krusial sebelum memulai pelatihan model machine learning. Tujuannya adalah untuk mengolah data mentah agar sesuai dan optimal untuk digunakan dalam proses pembelajaran mesin.
@@ -335,16 +325,18 @@ Berikut tampilan akhir rumah_2 (dataset *data_rumah*):
 
 ![image](https://github.com/user-attachments/assets/1fd1040e-3f92-4ca0-b728-a5e60e1ebb4a)
 
-2.	 Kedua, Menggabungkan kedua dataset menjadi dataframe *rumah_bersih*, dan menghapus duplikat data berdasarkan kolom house name.
+#### **1.3. Dataset Preparation pada Dataset Gabungan**
+
+1.	 Menggabungkan kedua dataset menjadi dataframe *rumah_bersih*, dan menghapus duplikat data berdasarkan kolom house name.
 	 
 ![image](https://github.com/user-attachments/assets/87f330c1-eaa7-4476-93dc-c665e4b0254d)
 
 ![image](https://github.com/user-attachments/assets/fbaa6396-79c5-4b8d-a29a-ac6a032603be)
 
-3.	 Ketiga, Mengubah ukuran price dari milyar ke juta untuk memudahkan pembacaan data.
+2.	 Mengubah ukuran price dari milyar ke juta untuk memudahkan pembacaan data.
 ![image](https://github.com/user-attachments/assets/70f09242-a523-4315-8972-64eb65b1d0d1)
 
-4.	Tampilan data setelah melalui tahapan 2 dan 3 adalah sebagai berikut:
+3.	Tampilan data setelah melalui tahapan 1 dan 2 adalah sebagai berikut:
 
 ![image](https://github.com/user-attachments/assets/b5d7eb9d-d456-4844-81c6-72094b46c869)
 
@@ -357,10 +349,31 @@ Bisa kita lihat Total data setelah digabungkan adalah sebanyak 8243 data.
 
 bisa kita lihat total data sekarang telah berkurang menjadi 8037 baris dan 8 kolom baru.
 
-2.	Selanjutnya kita juga menghapus data outliers sehingga data berkurang lagi menjadi 6593 baris dengan 7 kolom baru,ini terjadi disebabkan kolom house_name telah dihapus karena tidak dibutuhkan untuk tahapan selanjutnya.
+2.	Selanjutnya kita juga menghapus **data outliers** sehingga data berkurang lagi menjadi 6593 baris dengan 7 kolom baru,ini terjadi disebabkan kolom house_name telah dihapus karena tidak dibutuhkan untuk tahapan selanjutnya.
+berikut adalah tampilan awal data yang memiliki outliers:
+![image](https://github.com/user-attachments/assets/b771d15d-3ada-41ac-92f4-35ef27edb883)
+
+- Sebelum membersihkan outliers kita akan menghapus kolom house_name karena sudah tidak diperlukan lagi.
+
+![image](https://github.com/user-attachments/assets/060ced80-9642-410b-98d9-10861e552275)
+
+- Lalu pada tahapan berikutnya kita akan menghapus outliers menggunakan  IQR sebagai berikut:
+
+![image](https://github.com/user-attachments/assets/d47734a2-33aa-4850-afd1-73bb49c84e4c)
+
+- Setelah dilakukan pembersihan terhadap outliers maka kita akan mendapatkan hasil sebagai berikut:
+
+![image](https://github.com/user-attachments/assets/c44254d4-e54e-4865-8d01-21d19d062327)
+
+walaupun masih ada outliers, namun tidak perlu khawatir karena beberapa rumah memang memiliki variasi harga yg lebih mahal dibanding rumah lainnya.
+
+- Setelah dilakukan permbersihan, maka kita mendapatkan hasil akhir seperti yang diperlihatkan oleh gambar dibawah ini:
 ![image](https://github.com/user-attachments/assets/bf9a763a-c2ce-41d0-84b0-fbad9eefe139)
 
 3.	Tahapan akhir kita mencoba mengurangi rentang harga yang terlalu tinggi menggunakan Winsorizing , Winsorizing akan menggantikan 5% nilai terendah dan 5% nilai tertinggi dalam kolom 'price (million)' dengan persentil ke-5 dan persentil ke-95, sehingga mengurangi pengaruh outlier pada distribusi harga.
+![image](https://github.com/user-attachments/assets/bab77842-19cf-4f60-8b6d-915d9cc0b8bc)
+
+Berikut adalah tampilan data setelah dilakukan metode winsorizing, terlihat rentang data sudah tidak terlalu tinggi.
 ![image](https://github.com/user-attachments/assets/e1d47158-0717-46e6-8b9f-4773262f908f)
 
 
@@ -549,19 +562,23 @@ Berdasarkan perbandingan prediksi dengan nilai sebenarnya, dapat disimpulkan bah
 
 
 ## Referensi
-[[1]](https://jurnal.umj.ac.id/index.php/nalars/article/view/551/517)Kusumawardhani, V., Sutjahjo, S. H., & Dewi, I. K. (2016). PENYEDIAAN PERUMAHAN DAN INFRASTRUKTUR DASAR DI LINGKUNGAN PERMUKIMAN KUMUH PERKOTAAN (STUDI KASUS DI KOTA BANDUNG). _NALARs_, _15_(1), 13–24. https://doi.org/10.24853/nalars.15.1.13-24
+[1] Kusumawardhani, V., Sutjahjo, S. H., & Dewi, I. K. (2016). PENYEDIAAN PERUMAHAN DAN INFRASTRUKTUR DASAR DI LINGKUNGAN PERMUKIMAN KUMUH PERKOTAAN (STUDI KASUS DI KOTA BANDUNG). _NALARs_, _15_(1), 13–24. https://doi.org/10.24853/nalars.15.1.13-24
 
-[[2]](https://rumahbandungproperties.com/pasar-properti-bandung-kota-metropolitan-penuh-tren-dan-sejarah/)Liu. (2023). Pasar Properti Bandung Kota Metropolitan Penuh Tren dan Sejarah. Retrived from: https://rumahbandungproperties.com/pasar-properti-bandung-kota-metropolitan-penuh-tren-dan-sejarah/
+[2] Liu. (2023). Pasar properti Bandung kota metropolitan penuh tren dan sejarah. _Rumah Bandung Properties_. Retrived from: https://rumahbandungproperties.com/pasar-properti-bandung-kota-metropolitan-penuh-tren-dan-sejarah/
 
-[[3]](https://journal.utmmataram.ac.id/index.php/explore/article/view/123/109)Nuris, N. (2024). Analisis Prediksi Harga Rumah Pada Machine Learning Menggunakan Metode Regresi Linear. _EXPLORE_, _14_(2), 108–112. Retrived from: https://journal.utmmataram.ac.id/index.php/explore/article/view/123/109
+[3] Nuris, N. (2024). Analisis Prediksi Harga Rumah Pada Machine Learning Menggunakan Metode Regresi Linear. _EXPLORE_, _14_(2), 108–112. https://doi.org/10.35200/ex.v14i2.123
 
-[[4]](https://www.google.com/url?q=https%3A%2F%2Fmedium.com%2Fdata-folks-indonesia%2Fmemahami-data-dengan-exploratory-data-analysis-a53b230cce84)AC. (2019). Memahami Data Dengan Exploratory Data Analysis. Retrived from: https://medium.com/data-folks-indonesia/memahami-data-dengan-exploratory-data-analysis-a53b230cce84
+[4] Tim Data Folks Indonesia. (2019, 10 Oktober). Memahami data dengan exploratory data analysis. _Medium_. Retrived from: https://medium.com/data-folks-indonesia/memahami-data-dengan-exploratory-data-analysis-a53b230cce84
 
-[[5]](https://medium.com/bee-solution-partners/cara-kerja-algoritma-k-nearest-neighbor-k-nn-389297de543e) Asep Maulana Ismail. (2018). Cara Kerja Algoritma k-Nearest Neighbor (k-NN). Retrived from: https://medium.com/bee-solution-partners/cara-kerja-algoritma-k-nearest-neighbor-k-nn-389297de543e
+[5] Ismail, A. M. (2018). Cara kerja algoritma k-Nearest Neighbor (k-NN). _Medium_. Retrived from: https://medium.com/bee-solution-partners/cara-kerja-algoritma-k-nearest-neighbor-k-nn-389297de543e
 
-[[6]](https://ilmudatapy.com/algoritma-k-nearest-neighbor-knn-untuk-klasifikasi/)Lutfia Afifah. Algoritma K-Nearest Neighbor (KNN) untuk Klasifikasi. Retrived from: https://ilmudatapy.com/algoritma-k-nearest-neighbor-knn-untuk-klasifikasi/
+[6] Afifah, L. (n.d.). Algoritma K-Nearest Neighbor (KNN) untuk klasifikasi. _Ilmu Data Py_. Retrived from: https://ilmudatapy.com/algoritma-k-nearest-neighbor-knn-untuk-klasifikasi/
 
-[[7]](https://algorit.ma/blog/cara-kerja-algoritma-random-forest-2022/)algoritma. cara kerja algoritma random forest. Retrived from: https://algorit.ma/blog/cara-kerja-algoritma-random-forest-2022/
+[7] Algorit. ma. (2022). Cara kerja algoritma random forest. _Algorit. ma_. Retrived from: https://algorit.ma/blog/cara-kerja-algoritma-random-forest-2022/
+
+
+
+
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMjA4Njg0NDcyN119
 -->
