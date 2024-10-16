@@ -233,6 +233,7 @@ Keterangan:
 Jika kita perhatikan minimal nilai pada propery adalah 0. Di zaman sekarang ini sebuah rumah memiliki minimal 1 kamar tidur dan 1 kamar mandi, sehingga kita perlu curiga jika data tersebut merupakan data yang salah, serta terdapat anomali data pada land area dan building area,dimana tidak mungkin luas area memiliki luas dengan nilai minus atau 0.
 
 **3.	Anomali dan Missing Value**
+
 ![image](https://github.com/user-attachments/assets/03f13492-e6e9-41a5-9d0b-cc0202ac106d)
 
 Dari data diatas dapat kita lihat terdapat missing value  (nilai 0) pada bedroom dan bathroom serta anomali pada building area dan land_area dimana terdapat luas bangunan bernilai minus dan nol. Sedangkan Untuk carport_count tidak perlu dihiraukan karena beberapa rumah memang bisa tidak memiliki parkiran. Kita akan menghapus data ini pada tahap data preparation.
