@@ -372,7 +372,7 @@ walaupun masih ada outliers, namun tidak perlu khawatir karena beberapa rumah me
 ![image](https://github.com/user-attachments/assets/bf9a763a-c2ce-41d0-84b0-fbad9eefe139)
 
 3.	Tahapan akhir kita mencoba mengurangi rentang harga yang terlalu tinggi menggunakan Winsorizing , Winsorizing akan menggantikan 5% nilai terendah dan 5% nilai tertinggi dalam kolom 'price (million)' dengan persentil ke-5 dan persentil ke-95, sehingga mengurangi pengaruh outlier pada distribusi harga.
-4.	
+
 ![image](https://github.com/user-attachments/assets/bab77842-19cf-4f60-8b6d-915d9cc0b8bc)
 
 Berikut adalah tampilan data setelah dilakukan metode winsorizing, terlihat rentang data sudah tidak terlalu tinggi.
